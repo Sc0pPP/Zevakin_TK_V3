@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="TK_V3.MainWindow"
+        Title="TK_V3">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" Margin="40">
+                <StackPanel Orientation="Horizontal" Margin="40">
+                    <TextBlock Name="Label1" Text="Напряжение(Вольт)"/>
+                    <TextBox Width="100" Name="Input1"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="40">
+                    <TextBlock Name="Label2" Text="Сопротивление(ОМ)"/>
+                    <TextBox Width="100" Name="Input2"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="40">
+                <TextBlock Text="Вычисляемая величина"/>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <RadioButton Name="Power_Tok" GroupName="btn"   VerticalAlignment="Center"/>
+                    <TextBlock Text="Сила тока" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <RadioButton Name="Napr" GroupName="btn"   VerticalAlignment="Center"/>
+                    <TextBlock Text="Напряжение" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <RadioButton Name="Sopr" GroupName="btn"   VerticalAlignment="Center"/>
+                    <TextBlock Text="Сопротивление" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+            </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Width="800" Margin="0,0,0,40">
+            <TextBlock Text="Сила Тока=" Name="Output" HorizontalAlignment="Left" Margin="20,0"/>
+            <Button Content="Вычислить" Click="Button_OnClick" HorizontalAlignment="Right" Margin="300,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
